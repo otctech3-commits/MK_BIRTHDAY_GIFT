@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title id="pageTitle">Happy Birthday! 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="ytPlayer" style="display:none;"></div>
+  
+  <div class="wish-container" id="wishContainer">
+    <div class="gift-stage" id="giftStage">
+      <div class="gift-box" id="giftBox">
+        <div class="gift-lid"></div>
+        <div class="gift-body">
+          <div class="gift-bow"></div>
+        </div>
+      </div>
+      <p class="tap-text">Tap the gift to open 🎁</p>
+    </div>
+
+    <div class="celebration" id="celebration" style="display:none;">
+      <div class="confetti"></div>
+      <h1 class="bday-title">Happy Birthday <span id="bdayName"></span>!</h1>
+      <div class="age-badge" id="ageBadge" style="display:none;"></div>
+      
+      <div class="memories" id="memories"></div>
+      
+      <div class="message-box">
+        <i class="fa-solid fa-quote-left"></i>
+        <p id="specialMessage"></p>
+        <i class="fa-solid fa-quote-right"></i>
+      </div>
+      
+      <div class="footer-text">
+        <p>Made with ❤️ using Birthday Wish Maker</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="wish.js"></script>
+</body>
+</html>
