@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Birthday Wish Maker 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1><i class="fa-solid fa-cake-candles"></i> Birthday Wish Maker</h1>
+      <p>Create a special birthday surprise in 30 seconds</p>
+    </div>
+
+    <form id="wishForm" class="form">
+      <div class="form-group">
+        <label><i class="fa-solid fa-user"></i> Birthday Person's Name *</label>
+        <input type="text" id="name" placeholder="Rahul" required>
+      </div>
+
+      <div class="form-group">
+        <label><i class="fa-solid fa-hashtag"></i> Age (Optional)</label>
+        <input type="number" id="age" placeholder="21" min="1" max="120">
+      </div>
+
+      <div class="form-group">
+        <label><i class="fa-brands fa-youtube"></i> YouTube Song Link *</label>
+        <input type="url" id="song" placeholder="https://youtube.com/watch?v=dQw4w9WgXcQ" required>
+        <small>Paste any YouTube song. It'll autoplay when gift opens</small>
+      </div>
+
+      <div class="form-group">
+        <label><i class="fa-solid fa-message"></i> Special Message *</label>
+        <textarea id="message" rows="4" placeholder="You make every day brighter. Hope your birthday is as amazing as you are!" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label><i class="fa-solid fa-images"></i> Memory Pictures (Max 5)</label>
+        <input type="url" id="pic1" placeholder="https://i.imgur.com/pic1.jpg">
+        <input type="url" id="pic2" placeholder="https://i.imgur.com/pic2.jpg">
+        <input type="url" id="pic3" placeholder="https://i.imgur.com/pic3.jpg">
+        <input type="url" id="pic4" placeholder="https://i.imgur.com/pic4.jpg">
+        <input type="url" id="pic5" placeholder="https://i.imgur.com/pic5.jpg">
+        <small>Use Imgur, Postimg, or any direct image link</small>
+      </div>
+
+      <div class="form-group">
+        <label><i class="fa-solid fa-palette"></i> Theme Color</label>
+        <select id="theme">
+          <option value="purple">Purple Magic</option>
+          <option value="pink">Pink Love</option>
+          <option value="blue">Ocean Blue</option>
+          <option value="gold">Golden Luxury</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-generate">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Birthday Link
+      </button>
+    </form>
+
+    <div id="result" class="result" style="display:none;">
+      <h3><i class="fa-solid fa-link"></i> Your Birthday Link is Ready!</h3>
+      <div class="link-box">
+        <input type="text" id="wishLink" readonly>
+        <button onclick="copyLink()"><i class="fa-solid fa-copy"></i> Copy</button>
+      </div>
+      <a id="previewBtn" target="_blank" class="btn-preview">
+        <i class="fa-solid fa-eye"></i> Preview Wish
+      </a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
